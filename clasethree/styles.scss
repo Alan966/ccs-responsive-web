@@ -1,0 +1,56 @@
+// body{
+//     background: red;
+// }
+
+// .video{
+//     height: 0;
+//     padding: 56.25%;
+//     background: red;
+
+
+//     >iframe,
+//     >video{
+//         position:relative; 
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+
+// Video con unidades de vp
+
+
+@mixin ratio($w, $h){
+    display: grid;
+    grid-template-columns: repeat($w, 1fr);
+    grid-template-rows: repeat($h, 1fr);
+    position: relative;
+
+    &::before{
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+}
+
+.video{
+    @include ratio(9,9);
+
+    --unit:2vmax;
+    --width:calc(var(--unit)*16); 
+    --height:calc(var(--unit)*9); 
+    background: red;
+
+
+    
+    &::before{
+        content: "Hola";
+        display: block; 
+        padding:100%;
+    }
+
+    >iframe, >video{
+    position:relative; 
+    width: 100%;
+    height: 100%;
+}
+}

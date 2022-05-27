@@ -1,0 +1,17 @@
+$small: 320px; 
+$medium: 768px;
+$large: 1024px;
+
+@mixin rwd($breakpoint){
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+body {
+    background: red;
+
+   @include rwd($small){
+       background: yellow;
+   }
+}

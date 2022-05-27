@@ -1,0 +1,40 @@
+.card{
+    margin-bottom: 2rem;
+    border:1px solid var(--color-border);
+}
+.card__img img{
+    display: block;
+}
+
+.card__content{
+    padding: 1rem;
+    background: #f0f0f0;
+}
+
+.card__subtitle{
+    margin-top: -1rem;
+    margin-bottom: .5rem;
+    opacity: .6;
+}
+.card__footer{
+    border-top: 1px solid var(--color-border);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards-container{
+
+}
+
+.cards-container.card:first-child{
+    margin-right: 2rem;
+}
+
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}

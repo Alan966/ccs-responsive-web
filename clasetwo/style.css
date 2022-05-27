@@ -1,0 +1,88 @@
+/* Unidades relativas 
+1.-Porcentaje % 
+2.em (tamaño de fuente del contexto) 
+1em = 100% del tamaño de fuente en el contexto
+y 
+1rem = 100% del tamaño de fuente del root
+rem (tamaño de fuente del root<html>)
+ 3. unidades de viewport : vw, vh, vmin, vmax
+1vw = 1% del ancho del viewport 
+1vh = 1% del alto del viewport 
+1vmin = 1% del lado menor del viewport
+1vmax = 1% del lado mayor del viewport
+*/
+
+
+body{
+    font-size: 20px;
+}
+
+ /* p{ */
+     /* 1em = 40px  */
+     /* font-size:2em; 
+     background: yellow;
+     margin: 0 auto;
+     width: 75%;
+     min-width: 320px;
+     max-width: 800px;
+ } */
+
+ /* span{ */
+     /* 1em = 80px */
+     /* font-size: 2em;
+ }
+ */
+
+/* No utilizar em en layout */
+/* Utilizalo en componentes internos */
+
+
+/* button{
+    font-size:2em; 
+    border: none;
+    border-radius: .25em;
+
+    background-color: red;
+    color: #fff; 
+    padding: .5em 1.5em;
+    margin:2rem;
+} */
+
+/* 2.3.-Unidades de viewport */
+
+:root{
+    --scroll-bar: 20px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin: 0;
+}
+
+footer{
+    /* margin-top: auto;
+    background: #ddd;
+    padding: 1em; */
+
+    font-size: 2em;
+    background: red;
+    width: calc(100vw - var(--scroll-bar));
+}
+
+.box{
+    background:red;
+    width: 25vw;
+    height: 25vw;
+}
+
+header{
+    background:red; 
+    color: #fff; 
+    text-align: center;
+    padding: 10vmin 0;
+}

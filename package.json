@@ -1,0 +1,15 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "hola",
+  "main": "index.js",
+  "scripts": {
+    "test": "nose",
+    "sass":"node-sass --watch src/sass/ --output src/css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
