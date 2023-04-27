@@ -6,19 +6,19 @@ Responsive Web Design
 -Etahn Marcote, 2010 
 -Una web para todos 
 Principios 
--Fluid rid 
--Imagenes flexibles 
--Media queries 
+-Fluid rid
+-Imagenes flexibles
+-Media queries
 */
 
 /* Viewport 
    <meta name="viewport content="">
-   - width=device-width 
-   -user-scalable=no|yes 
-   -initial-scale=1 
-   -maximun-scale
+   - width=device-width
+   -user-scalable=no|yes
+   -initial-scale=1
+   -maximun-scale */
 
-*/
+
 
 
 /* Viewport != resolucion de la pantalla 
@@ -27,25 +27,48 @@ Principios
 */
 
 /* Media queries 
-Es uan consulta de medios donde se visualiza la web 
-Se epeuede ver en una hoja impresa en una pantallweb 
+Es una consulta de medios donde se visualiza la web 
+Se puede ver en una hoja impresa en una pantallweb 
 */
 
 
-@media screen and (min-width:600px) {
+body{
+    background:yellow;
+}
+h1::after{
+    content:'mobile vertical'
+}
+@media screen and (min-aspect-ratio: 4/3){
     body{
-        background:yellow;
+        background:blue;
+    }
+    h1::after{
+        content:'desktop'
     }
 }
-
-
+@media screen and (min-width: 540px) and (orientation: portrait){
+    body{
+        background:red;
+    }
+    h1::after{
+        content:'tablet vertical'
+    }
+}
+@media screen and (min-width: 667px) and (min-aspect-ratio: 16/9) and (orientation: landscape){
+    body{
+        background:orange;
+    }
+    h1::after{
+        content:'mobile horizontal'
+    }
+}
 /* @media screen and (max-width:600px) {
     body{
         background:orange;
     }
-} 
-min-width, max-width 
-orientation: landscape | portrait 
+}
+min-width, max-width
+orientation: landscape | portrait
 min-aspect-ratio, max-aspect-ratio, device-aspect-ratio
 
 */
@@ -56,12 +79,6 @@ min-aspect-ratio, max-aspect-ratio, device-aspect-ratio
     }
 } */
 
-/* 
-@media screen and (min-aspect-ratio: 4/3) {
-    body{
-        background:blue;
-    }
-} */
 
 
 
